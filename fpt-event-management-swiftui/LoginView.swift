@@ -19,7 +19,7 @@ struct LoginView: View {
         VStack {
           ZStack(alignment: .bottomTrailing) {
             RoundedCornersShape(corners: [.bottomLeft], radius: 150)
-              .foregroundColor(Color.orange)
+              .foregroundColor(Color.orange.opacity(0.8))
               .frame(height: UIScreen.main.bounds.height / 2.5)
 
             Text("Login")
@@ -54,7 +54,7 @@ struct LoginView: View {
               .fontWeight(.bold)
               .foregroundColor(Color.white)
               .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: 60)
-              .background(Color.orange)
+              .background(Color.orange.opacity(0.8))
               .cornerRadius(30)
               .padding(.vertical, 10)
               .padding(.horizontal, 30)
@@ -71,7 +71,7 @@ struct LoginView: View {
           HStack {
             Text("Don't have an account ? ")
             Text("Register")
-              .foregroundColor(Color.orange)
+              .foregroundColor(Color.orange.opacity(0.8))
           }
           Spacer()
         }

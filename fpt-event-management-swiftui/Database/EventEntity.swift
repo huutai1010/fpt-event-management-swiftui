@@ -35,4 +35,18 @@ class EventEntity {
       print("Create table not successfully. Error: \(nserror)")
     }
   }
+
+  func queryAll() -> AnySequence<Row>? {
+    do {
+      if let connection = Database.shared.connection {
+        let result: AnySequence<Row> = try connection.prepare(tblEvent)
+        return result
+      }
+    } catch {
+      let nserror = error as NSError
+      print("Error when query all events. Error: \(nserror)")
+      return nil
+    }
+    return nil
+  }
 }

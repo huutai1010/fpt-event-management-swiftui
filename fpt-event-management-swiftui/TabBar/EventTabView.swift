@@ -39,7 +39,7 @@ struct EventsView: View {
           .ignoresSafeArea()
 
         ScrollView(.vertical, showsIndicators: false) {
-          ForEach(1..<6) { index in
+          ForEach(1..<7) { index in
             CardEventView(index: index)
           }
         }
@@ -54,7 +54,7 @@ struct CardEventView: View {
   @State var isPressed = true
   var index: Int
   var body: some View {
-    NavigationLink(destination: View1()) {
+    NavigationLink(destination: EventDetailView(indexImage: index)) {
       VStack {
         VStack(alignment: .center) {
           Image("\(index)")
