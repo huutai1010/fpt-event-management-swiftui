@@ -25,7 +25,7 @@ struct EventTabView: View {
       default:
         View3()
       }
-      CustomTabBar(selectedTab: $selectedTab, tabPoints: [])
+      CustomTabBar(selectedTab: $selectedTab, tabPoints: [0.5])
         .shadow(radius: 4)
     }
   }

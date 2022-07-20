@@ -13,7 +13,7 @@ import UIKit
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-//      UserEntity.shared.insert(userName: "huutai1010", password: "123", fullName: "Mai Huu Tai", address: "Tien Giang", phone: "0858155621", roleName: "user")
+//      UserEntity.shared.insert(userName: "Huutai1010", password: "123", fullName: "Mai Huu Tai", address: "Tien Giang", phone: "0858155621", roleName: "user")
 //      UserEntity.shared.insert(userName: "nguyenvana", password: "456", fullName: "Nguyen Van A", address: "HCM City", phone: "0123456789", roleName: "user")
         return true
     }
