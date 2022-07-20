@@ -17,6 +17,7 @@ class UserEntity {
   private let fullName = Expression<String>("fullName")
   private let address = Expression<String>("address")
   private let phone = Expression<String>("phone")
+  private let avatar = Expression<String>("avatar")
   private let roleName = Expression<String>("roleName")
 
   private init() {
@@ -29,6 +30,7 @@ class UserEntity {
           table.column(self.fullName)
           table.column(self.address)
           table.column(self.phone)
+          table.column(self.avatar)
           table.column(self.roleName)
         }))
       }
@@ -38,13 +40,14 @@ class UserEntity {
     }
   }
 
-  func insert(userName: String, password: String?, fullName: String?, address: String?, phone: String?, roleName: String?) -> Int64? {
+  func insert(userName: String, password: String?, fullName: String?, address: String?, phone: String?, avatar: String?, roleName: String?) -> Int64? {
     do {
       let insert = tblUser.insert(self.userName <- userName,
                                   self.password <- password ?? "",
                                   self.fullName <- fullName ?? "",
                                   self.address <- address ?? "",
                                   self.phone <- phone ?? "",
+                                  self.avatar <- avatar ?? "",
                                   self.roleName <- roleName ?? "")
       let insertID = try Database.shared.connection?.run(insert)
       return insertID

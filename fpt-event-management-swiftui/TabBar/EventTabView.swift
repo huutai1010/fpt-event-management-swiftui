@@ -23,7 +23,7 @@ struct EventTabView: View {
       case "message":
         View2()
       default:
-        View3()
+        ProfileView()
       }
       CustomTabBar(selectedTab: $selectedTab, tabPoints: [0.5])
         .shadow(radius: 4)
@@ -111,7 +111,7 @@ struct View2: View {
   }
 }
 
-struct View3: View {
+struct ProfileView: View {
   var body: some View {
     ZStack {
       Color.white

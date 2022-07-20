@@ -23,4 +23,17 @@ class Database {
       print("Cannot connect to Database. Error is: \(nserror), \(nserror.userInfo)")
     }
   }
+
+  func getDocumentDirectory() -> String {
+    var strURL = ""
+    do {
+      let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+      let documentDirectory = paths[0]
+      strURL = try String(contentsOf: documentDirectory)
+    } catch {
+      let nserror = error as NSError
+      print("Error when convert URL to String. Error \(nserror)")
+    }
+    return strURL
+  }
 }
