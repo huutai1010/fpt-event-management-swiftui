@@ -85,7 +85,7 @@ struct TabBarButton: View {
 
           Image(systemName: "\(image)\(selectedTab == image ? ".fill" : "")")
             .font(.system(size: 25, weight: .semibold))
-            .foregroundColor(Color.black)
+            .foregroundColor(Color.orange)
             .offset(y: selectedTab == image ? -10 : 0)
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity)

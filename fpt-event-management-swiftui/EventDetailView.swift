@@ -39,7 +39,6 @@ struct EventDetailView: View {
 
           }
         }
-        //.border(Color.red, width: 5)
 
         ScrollView(.vertical, showsIndicators: false) {
           HStack {
@@ -71,7 +70,6 @@ struct EventDetailView: View {
           }
           .padding(.vertical, 5)
 
-
           VStack {
             HStack {
               Text("Time")
@@ -87,8 +85,6 @@ struct EventDetailView: View {
             }
           }
           .padding(.vertical, 5)
-
-
 
           VStack {
             HStack {
@@ -143,13 +139,6 @@ struct NavigationConfigurator: UIViewControllerRepresentable {
 }
 
 
-struct EventDetailView_Previews: PreviewProvider {
-  static var previews: some View {
-    EventDetailView(indexImage: 1)
-  }
-}
-
-
 struct MapView: View {
   @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.83834, longitude: 14.25405), span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
   var body: some View {
@@ -160,3 +149,8 @@ struct MapView: View {
 }
 
 // NavigationConfigurator is from the OP's post: https://stackoverflow.com/a/58427754/7834914
+struct EventDetailView_Previews: PreviewProvider {
+  static var previews: some View {
+    EventDetailView(indexImage: 1)
+  }
+}

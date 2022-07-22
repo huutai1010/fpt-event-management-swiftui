@@ -26,7 +26,7 @@ struct EventTabView: View {
         ProfileView()
       }
       CustomTabBar(selectedTab: $selectedTab, tabPoints: [0.5])
-        .shadow(radius: 4)
+        .shadow(radius: 5)
     }
   }
 }
@@ -107,16 +107,6 @@ struct View2: View {
       Color.white
         .ignoresSafeArea()
       Text("View 2")
-    }
-  }
-}
-
-struct ProfileView: View {
-  var body: some View {
-    ZStack {
-      Color.white
-        .ignoresSafeArea()
-      Text("View 3")
     }
   }
 }

@@ -16,6 +16,8 @@
 		0A9D00B42884EE41000C5988 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D00B32884EE41000C5988 /* EventEntity.swift */; };
 		0A9D00B628850BBC000C5988 /* EventTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D00B528850BBC000C5988 /* EventTabView.swift */; };
 		0AA20D452886A726006F6732 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA20D442886A725006F6732 /* EventDetailView.swift */; };
+		0AAAD294288A2CA90099B502 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAD293288A2CA90099B502 /* ProfileView.swift */; };
+		0AAAD296288A2E210099B502 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAD295288A2E210099B502 /* RoundedCornersShape.swift */; };
 		0AB532462884E5AB0094E6DC /* fpt_event_management_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB532452884E5AB0094E6DC /* fpt_event_management_swiftuiApp.swift */; };
 		0AB532482884E5AB0094E6DC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB532472884E5AB0094E6DC /* LoginView.swift */; };
 		0AB5324A2884E5B20094E6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB532492884E5B20094E6DC /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		0A9D00B32884EE41000C5988 /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
 		0A9D00B528850BBC000C5988 /* EventTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTabView.swift; sourceTree = "<group>"; };
 		0AA20D442886A725006F6732 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		0AAAD293288A2CA90099B502 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0AAAD295288A2E210099B502 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		0AB532422884E5AB0094E6DC /* fpt-event-management-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fpt-event-management-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB532452884E5AB0094E6DC /* fpt_event_management_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fpt_event_management_swiftuiApp.swift; sourceTree = "<group>"; };
 		0AB532472884E5AB0094E6DC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -68,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				0A2F9E242885C9A600D6CB6D /* CustomTabBar.swift */,
-				0A9D00B528850BBC000C5988 /* EventTabView.swift */,
 				0A2F9E262885CD3A00D6CB6D /* TabCurve.swift */,
 			);
 			path = TabBar;
@@ -109,7 +112,10 @@
 				0A2F9E2228851AC400D6CB6D /* AppDelegate.swift */,
 				0A9D00AE2884E8BE000C5988 /* Database */,
 				0AB532452884E5AB0094E6DC /* fpt_event_management_swiftuiApp.swift */,
+				0AAAD295288A2E210099B502 /* RoundedCornersShape.swift */,
 				0AB532472884E5AB0094E6DC /* LoginView.swift */,
+				0A9D00B528850BBC000C5988 /* EventTabView.swift */,
+				0AAAD293288A2CA90099B502 /* ProfileView.swift */,
 				0AA20D442886A725006F6732 /* EventDetailView.swift */,
 				0A2F9E2028850D4200D6CB6D /* ErrorView.swift */,
 				0AB532492884E5B20094E6DC /* Assets.xcassets */,
@@ -252,9 +258,11 @@
 				0A9D00B02884E8D5000C5988 /* Database.swift in Sources */,
 				0A9D00B42884EE41000C5988 /* EventEntity.swift in Sources */,
 				0AB532482884E5AB0094E6DC /* LoginView.swift in Sources */,
+				0AAAD294288A2CA90099B502 /* ProfileView.swift in Sources */,
 				0A9D00B628850BBC000C5988 /* EventTabView.swift in Sources */,
 				0A2F9E2128850D4200D6CB6D /* ErrorView.swift in Sources */,
 				0AB532462884E5AB0094E6DC /* fpt_event_management_swiftuiApp.swift in Sources */,
+				0AAAD296288A2E210099B502 /* RoundedCornersShape.swift in Sources */,
 				0A2F9E252885C9A600D6CB6D /* CustomTabBar.swift in Sources */,
 				0A9D00B22884EC37000C5988 /* UserEntity.swift in Sources */,
 				0AA20D452886A726006F6732 /* EventDetailView.swift in Sources */,
