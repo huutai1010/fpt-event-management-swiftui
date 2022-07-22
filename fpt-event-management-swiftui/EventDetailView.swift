@@ -125,6 +125,7 @@ struct EventDetailView: View {
 }
 
 
+// Hide navigation bar when scrolling
 struct NavigationConfigurator: UIViewControllerRepresentable {
   var configure: (UINavigationController) -> Void = { _ in }
 

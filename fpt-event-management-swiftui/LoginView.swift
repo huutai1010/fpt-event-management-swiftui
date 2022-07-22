@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct LoginView: View {
   @State var userID: String = ""
@@ -49,6 +50,8 @@ struct LoginView: View {
             self.isLoginUserCorrect =  UserEntity.shared.login(userName: userID, password: password)
             isPresentedAlert = !isLoginUserCorrect
             print("isActive = \(isPresentedAlert)")
+            requestPermissionForNotification() // request notification from user
+            scheduleNotification()
           } label: {
             Text("Login")
               .fontWeight(.bold)
@@ -59,7 +62,6 @@ struct LoginView: View {
               .padding(.vertical, 10)
               .padding(.horizontal, 30)
               .shadow(color: Color.gray.opacity(0.8), radius: 3, x: 0, y: 3)
-
           }
           .alert("Incorrect UserName or Password", isPresented: $isPresentedAlert) {
             Button("OK", role: .cancel) {}
@@ -90,6 +92,31 @@ struct LoginView: View {
     } else {
       ErrorView()
     }
+  }
+}
+
+
+extension LoginView {
+  func requestPermissionForNotification() {
+    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+      if success {
+        print("All set!")
+      } else if let error = error {
+        print(error.localizedDescription)
+      }
+    }
+  }
+
+  func scheduleNotification() {
+    let content = UNMutableNotificationContent()
+    content.title = "Login Successfully"
+    content.subtitle = "Welcome to FPT Event Management"
+    content.body = "Notification body"
+    content.sound = UNNotificationSound.default
+
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    UNUserNotificationCenter.current().add(request)
   }
 }
 
