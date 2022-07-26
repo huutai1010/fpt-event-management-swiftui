@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct EventTabView: View {
+struct UserView: View {
   @State var selectedTab = "house"
-
+  
   var body: some View {
 
     ZStack(alignment: .bottom) {
@@ -113,7 +113,7 @@ struct View2: View {
 
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
-    EventTabView()
+    UserView()
   }
 }
 

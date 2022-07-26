@@ -9,14 +9,15 @@ import Foundation
 import SQLite
 
 class EventEntity {
-  static let shared = EventEntity()
-  private let tblEvent = Table("tblEvent")
-  private let eventID = Expression<Int64>("eventID")
-  private let eventName = Expression<String>("EventName")
-  private let description = Expression<String>("description")
-  private let location = Expression<String>("location")
-  private let posterImage = Expression<String>("posterImage")
+  static let shared           = EventEntity()
+  private let tblEvent        = Table("tblEvent")
+  private let eventID         = Expression<Int64>("eventID")
+  private let eventName       = Expression<String>("EventName")
+  private let detail          = Expression<String>("detail")
+  private let location        = Expression<String>("location")
+  private let posterImage     = Expression<String>("posterImage")
   private let backgroundImage = Expression<String>("backgroundImage")
+  private let host            = Expression<String>("userName")
 
   private init() {
     do {
@@ -24,7 +25,7 @@ class EventEntity {
         try connection.run(tblEvent.create(temporary: false, ifNotExists: true, withoutRowid: false, block: { table in
           table.column(self.eventID, primaryKey: true)
           table.column(self.eventName)
-          table.column(self.description)
+          table.column(self.detail)
           table.column(self.location)
           table.column(self.backgroundImage)
           table.column(self.posterImage)
@@ -47,19 +48,19 @@ class EventEntity {
     }
   }
 
-  //insert
-  func insert(eventName: String, description: String?, location: String?, backgroundImage: String?, posterImage: String?) -> Int64? {
+  // insert new event record
+  func insert(eventName: String, detail: String?, location: String?, backgroundImage: String?, posterImage: String?) -> Int64? {
     do {
-      let insert = tblEvent.insert(self.eventName <- eventName,
-                                  self.description <- description ?? "",
-                                  self.location <- location ?? "",
-                                  self.backgroundImage <- backgroundImage ?? "",
-                                  self.posterImage <- posterImage ?? "")
+      let insert = tblEvent.insert(self.eventName       <- eventName,
+                                   self.detail          <- detail ?? "",
+                                   self.location        <- location ?? "",
+                                   self.backgroundImage <- backgroundImage ?? "",
+                                   self.posterImage     <- posterImage ?? "")
       let insertID = try Database.shared.connection?.run(insert)
       return insertID
     } catch {
       let nserror = error as NSError
-      print("Cannot insert new user. Error: \(nserror)")
+      print("Cannot insert new event. Error is \(nserror), \(nserror.userInfo)")
       return nil
     }
   }

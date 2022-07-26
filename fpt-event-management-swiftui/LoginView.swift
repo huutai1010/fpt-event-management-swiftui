@@ -11,8 +11,9 @@ import UserNotifications
 struct LoginView: View {
   @State var userID: String = ""
   @State var password: String = ""
-  @State var isLoginUserCorrect = false
+  @State var isLoginSuccessful = false
   @State var isPresentedAlert = false
+  @State var roleName = ""
 
   var body: some View {
     NavigationView {
@@ -39,7 +40,7 @@ struct LoginView: View {
           TextField("User ID", text: $userID)
             .customLoginTextField()
 
-          TextField("Password", text: $password)
+          SecureField("Password", text: $password)
             .customLoginTextField()
           HStack {
             Spacer()
@@ -47,11 +48,16 @@ struct LoginView: View {
               .padding(.horizontal, 30)
           }
           Button {
-            self.isLoginUserCorrect =  UserEntity.shared.login(userName: userID, password: password)
-            isPresentedAlert = !isLoginUserCorrect
-            print("isActive = \(isPresentedAlert)")
-            requestPermissionForNotification() // request notification from user
-            scheduleNotification()
+            let loginAnswer = UserEntity.shared.checkLogin(email: userID, password: password)
+            let isLoginSuccessful = loginAnswer.isLoginSuccessful
+            let roleName = loginAnswer.roleName
+
+            self.isLoginSuccessful =  isLoginSuccessful
+            self.roleName = roleName
+            isPresentedAlert = !self.isLoginSuccessful
+            print("isPresentedAlert = \(isPresentedAlert)")
+            //requestPermissionForNotification() // request notification from user
+            //scheduleNotification()
           } label: {
             Text("Login")
               .fontWeight(.bold)
@@ -67,7 +73,7 @@ struct LoginView: View {
             Button("OK", role: .cancel) {}
           }
 
-          NavigationLink(destination: destinationView, isActive: $isLoginUserCorrect) {
+          NavigationLink(destination: destinationView, isActive: $isLoginSuccessful) {
           }
 
           HStack {
@@ -87,9 +93,13 @@ struct LoginView: View {
 
   @ViewBuilder
   var destinationView: some View {
-    if isLoginUserCorrect {
-      EventTabView()
-    } else {
+    if isLoginSuccessful && roleName == "User" {
+      UserView()
+    }
+    else if isLoginSuccessful && roleName == "Admin" {
+      AdminView()
+    }
+    else {
       ErrorView()
     }
   }

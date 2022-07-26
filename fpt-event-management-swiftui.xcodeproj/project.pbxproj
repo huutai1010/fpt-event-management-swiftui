@@ -14,7 +14,7 @@
 		0A9D00B02884E8D5000C5988 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D00AF2884E8D5000C5988 /* Database.swift */; };
 		0A9D00B22884EC37000C5988 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D00B12884EC37000C5988 /* UserEntity.swift */; };
 		0A9D00B42884EE41000C5988 /* EventEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D00B32884EE41000C5988 /* EventEntity.swift */; };
-		0A9D00B628850BBC000C5988 /* EventTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D00B528850BBC000C5988 /* EventTabView.swift */; };
+		0A9D00B628850BBC000C5988 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D00B528850BBC000C5988 /* UserView.swift */; };
 		0AA20D452886A726006F6732 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA20D442886A725006F6732 /* EventDetailView.swift */; };
 		0AAAD294288A2CA90099B502 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAD293288A2CA90099B502 /* ProfileView.swift */; };
 		0AAAD296288A2E210099B502 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAD295288A2E210099B502 /* RoundedCornersShape.swift */; };
@@ -22,6 +22,8 @@
 		0AB532482884E5AB0094E6DC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB532472884E5AB0094E6DC /* LoginView.swift */; };
 		0AB5324A2884E5B20094E6DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB532492884E5B20094E6DC /* Assets.xcassets */; };
 		0AB5324D2884E5B20094E6DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB5324C2884E5B20094E6DC /* Preview Assets.xcassets */; };
+		0AF2B47128902DC40027C428 /* RoleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2B47028902DC40027C428 /* RoleEntity.swift */; };
+		0AF2B47328903E7E0027C428 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2B47228903E7E0027C428 /* AdminView.swift */; };
 		DAB423AFF2F7610B1AC271C9 /* Pods_fpt_event_management_swiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EE3DDB5FEF36C4CCDB8654 /* Pods_fpt_event_management_swiftui.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +35,7 @@
 		0A9D00AF2884E8D5000C5988 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		0A9D00B12884EC37000C5988 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		0A9D00B32884EE41000C5988 /* EventEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntity.swift; sourceTree = "<group>"; };
-		0A9D00B528850BBC000C5988 /* EventTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTabView.swift; sourceTree = "<group>"; };
+		0A9D00B528850BBC000C5988 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		0AA20D442886A725006F6732 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		0AAAD293288A2CA90099B502 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0AAAD295288A2E210099B502 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		0AB532472884E5AB0094E6DC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0AB532492884E5B20094E6DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AB5324C2884E5B20094E6DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AF2B47028902DC40027C428 /* RoleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleEntity.swift; sourceTree = "<group>"; };
+		0AF2B47228903E7E0027C428 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		0B8B8F323F4AB0EF6EBBC4FC /* Pods-fpt-event-management-swiftui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fpt-event-management-swiftui.release.xcconfig"; path = "Target Support Files/Pods-fpt-event-management-swiftui/Pods-fpt-event-management-swiftui.release.xcconfig"; sourceTree = "<group>"; };
 		27EE3DDB5FEF36C4CCDB8654 /* Pods_fpt_event_management_swiftui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fpt_event_management_swiftui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAC33D6552530A78C7B1DFE /* Pods-fpt-event-management-swiftui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fpt-event-management-swiftui.debug.xcconfig"; path = "Target Support Files/Pods-fpt-event-management-swiftui/Pods-fpt-event-management-swiftui.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				0A9D00AF2884E8D5000C5988 /* Database.swift */,
 				0A9D00B12884EC37000C5988 /* UserEntity.swift */,
+				0AF2B47028902DC40027C428 /* RoleEntity.swift */,
 				0A9D00B32884EE41000C5988 /* EventEntity.swift */,
 			);
 			path = Database;
@@ -114,7 +119,8 @@
 				0AB532452884E5AB0094E6DC /* fpt_event_management_swiftuiApp.swift */,
 				0AAAD295288A2E210099B502 /* RoundedCornersShape.swift */,
 				0AB532472884E5AB0094E6DC /* LoginView.swift */,
-				0A9D00B528850BBC000C5988 /* EventTabView.swift */,
+				0AF2B47228903E7E0027C428 /* AdminView.swift */,
+				0A9D00B528850BBC000C5988 /* UserView.swift */,
 				0AAAD293288A2CA90099B502 /* ProfileView.swift */,
 				0AA20D442886A725006F6732 /* EventDetailView.swift */,
 				0A2F9E2028850D4200D6CB6D /* ErrorView.swift */,
@@ -254,12 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF2B47128902DC40027C428 /* RoleEntity.swift in Sources */,
 				0A2F9E2328851AC400D6CB6D /* AppDelegate.swift in Sources */,
 				0A9D00B02884E8D5000C5988 /* Database.swift in Sources */,
 				0A9D00B42884EE41000C5988 /* EventEntity.swift in Sources */,
 				0AB532482884E5AB0094E6DC /* LoginView.swift in Sources */,
 				0AAAD294288A2CA90099B502 /* ProfileView.swift in Sources */,
-				0A9D00B628850BBC000C5988 /* EventTabView.swift in Sources */,
+				0A9D00B628850BBC000C5988 /* UserView.swift in Sources */,
 				0A2F9E2128850D4200D6CB6D /* ErrorView.swift in Sources */,
 				0AB532462884E5AB0094E6DC /* fpt_event_management_swiftuiApp.swift in Sources */,
 				0AAAD296288A2E210099B502 /* RoundedCornersShape.swift in Sources */,
@@ -267,6 +274,7 @@
 				0A9D00B22884EC37000C5988 /* UserEntity.swift in Sources */,
 				0AA20D452886A726006F6732 /* EventDetailView.swift in Sources */,
 				0A2F9E272885CD3A00D6CB6D /* TabCurve.swift in Sources */,
+				0AF2B47328903E7E0027C428 /* AdminView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

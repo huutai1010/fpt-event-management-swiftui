@@ -55,7 +55,7 @@ struct CustomTabBar: View {
 
 struct CustomerTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        EventTabView()
+        UserView()
     }
 }
 

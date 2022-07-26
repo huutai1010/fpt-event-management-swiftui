@@ -15,10 +15,8 @@ import UserNotifications
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
-//          UserEntity.shared.insert(userName: "Huutai1010", password: "123", fullName: "Mai Huu Tai", address: "Tien Giang", phone: "0858155621", avatar: "", roleName: "user")
-//          UserEntity.shared.insert(userName: "Hieptran", password: "456", fullName: "Tran Thanh Hiep", address: "HCM City", phone: "0123456789", avatar: "", roleName: "user")
-//          UserEntity.shared.insert(userName: "Chuongvu", password: "789", fullName: "Vu Nguyen Huy Chuong", address: "Ninh Thuan", phone: "0123456789", avatar: "", roleName: "user")
-    getAllUsers()
+//    UserEntity.shared.insert(email: "huutaia21010@gmail.com", password: "123", fullName: "Mai Huu Tai", address: "Tien Giang", phone: "0858155621", avatar: "")
+//    UserEntity.shared.insert(email: "admin", password: "1", fullName: "Admin", address: "", phone: "", avatar: "", roleID: 1)
     return true
   }
 
@@ -29,18 +27,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     
   }
-
-
-  func getAllUsers() {
-    if let listUsers: AnySequence<Row> = UserEntity.shared.queryAll() {
-      for eachUser in listUsers {
-        UserEntity.shared.toString(user: eachUser)
-      }
-    }
-  }
 }
-
-
-// /Users/maihuutai/Library/Developer/CoreSimulator/Devices/2BB4A4B6-9052-46B9-9A32-4DDA58328320/data/Containers/Data/Application/CED19AE4-7F5B-4D0D-80D5-9895D7002A60/Documents/fptEventManagement.sqlite3
-
-

@@ -11,7 +11,7 @@ import SQLite
 class Database {
   static let shared = Database()
   public let connection: Connection?
-  public let databaseFileName = "fptEventManagement.sqlite3"
+  public let databaseFileName = "FPTEventManagement.sqlite3"
   private init() {
     let dbPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String?
     do {
